@@ -179,7 +179,7 @@ html {
     }
 }
 
-@media (min-width:1024px) {
+@media (min-width:1440px) {
     body {
         max-width: 1440px;
         background-image: url(../assets/desktop/image-host.jpg);
