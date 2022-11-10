@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;900&display=swap');
+
+:root{
+    /* Colors */
+    --color:#54E6AF;
+    --color2:#2C344B;
+    --color3:#121725;
+    --color4:#FFFFFF;
+    --color5:#5A668A;
+    --color6:#C2CBE5;
+
+    /* Typo */
+    --ff: 'Chivo', sans-serif;
+    /* Titles */
+    --h1-fs: 52px;
+    --h1-lh: 62px;
+    /*Body*/
+    --body-fs:18px;
+    --body-lh:28px;
+}
+
+/*General */
+html, body{
+    margin: 0;
+    width: 100vw;
+    min-height: 100vh;
+    font-family: var(--ff);
+    font-size: var(--body-fs);
+}
+
+html{background-image: url('../assets/mobile/image-host.jpg');background-image: linear-gradient(#121725d1, #121725d1), url(../assets/mobile/image-host.jpg);}
+
+/* Content */
+.main {
+    display: flex;
+    padding: 62px 24px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content {
+    display: grid;
+    grid-template-areas:
+        "T T"
+        "P P"
+        "S S"
+        "F F";
+}
+/* Text */
+h1 {
+    font-size: 26px;
+    line-height: 38px;
+    color: var(--color);
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    grid-area: T;
+    padding-top: 16px;
+}
+
+h1 span {color: var(--color4);}
+
+p {
+    font-size: 15px;
+    line-height: 25px;
+    color: var(--color6);
+    text-align: center;
+    opacity: 0.6;
+    grid-area: P;
+}
+
+/* Form */
+form {
+    display: grid;
+    gap: 16px;
+    grid-area: F;
+}
+
+input, button {
+    border-radius: 28px;
+    border: none;
+    min-height: 46px;
+}
+
+input {
+    background: var(--color2);
+}input::placeholder {
+    color: var(--color4);
+    opacity: 0.5;
+    padding: 10px;
+}
+
+button {
+    background-color: var(--color);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--color3);
+}
+
+
+
+/* Sponsors */
+.sponsors {
+    display: flex;
+    gap: 23px;
+    grid-area: S;
+    align-items: center;
+    padding: 30px;
+}
+.sponsor img {width: 100%;opacity: 0.7;}
+
+
+/* Tablet */
+@media (min-width:600px) {
+    html {
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-image: url('../assets/tablet/image-host.jpg');
+        background-color: var(--color3);
+    }
+    .logo {
+        position: absolute;
+        top: 50px;
+        left: 30px;
+    }
+    
+    .main {
+        justify-content: center;
+        min-height: 100vh;
+    }
+    
+    .content {
+        max-width: 630px;
+        background-color: var(--color3);
+        padding: 30px;
+        padding-left: 0;
+        grid-template-areas:
+            "T T"
+            "P P"
+            "F F"
+            "S S";
+    }
+
+    /* Text */
+    h1, p {text-align: left;}
+    
+    h1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+    
+    p {
+        font-size: 18px;
+        line-height: 28px;
+        max-width: 80%;
+    }
+
+    /* Form */
+    form {
+        max-width: 80%;
+        position: relative;
+    }
+    
+    button {
+        position: absolute;
+        right: 0px;
+    }
+}
