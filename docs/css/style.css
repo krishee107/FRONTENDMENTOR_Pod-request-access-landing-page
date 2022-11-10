@@ -23,7 +23,6 @@
 html, body{
     margin: 0;
     width: 100vw;
-    min-height: 100vh;
     font-family: var(--ff);
     font-size: var(--body-fs);
     background-repeat: no-repeat;
