@@ -178,7 +178,13 @@ html {
         right: 0px;
     }
 }
-
+@media (min-width:1040px) {
+    .logo {
+        position: absolute;
+        z-index: 1;
+        top: 30px;
+    }
+}
 @media (min-width:1440px) {
     body {
         max-width: 1440px;
@@ -187,7 +193,7 @@ html {
         background-position: center right;
     }
     .logo {
-        top: 112px;
+        top: 30px;
         left: 234px;
     }
     
