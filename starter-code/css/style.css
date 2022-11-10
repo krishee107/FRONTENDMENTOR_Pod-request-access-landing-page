@@ -26,9 +26,14 @@ html, body{
     min-height: 100vh;
     font-family: var(--ff);
     font-size: var(--body-fs);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-html{background-image: url('../assets/mobile/image-host.jpg');background-image: linear-gradient(#121725d1, #121725d1), url(../assets/mobile/image-host.jpg);}
+html{
+    background-image: url('../assets/mobile/image-host.jpg');
+    background-image: linear-gradient(#121725d1, #121725d1), url(../assets/mobile/image-host.jpg);
+}
 
 /* Content */
 .main {
@@ -113,12 +118,19 @@ button {
 
 /* Tablet */
 @media (min-width:600px) {
-    html {
+    html{
+        background-color: var(--color3);
+    }
+    body {
         background-repeat: no-repeat;
         background-position: top right;
         background-image: url('../assets/tablet/image-host.jpg');
-        background-color: var(--color3);
+        background-size: unset;
     }
+
+html {
+    background-image: unset;
+}
     .logo {
         position: absolute;
         top: 50px;
@@ -165,5 +177,36 @@ button {
     button {
         position: absolute;
         right: 0px;
+    }
+}
+
+@media (min-width:1024px) {
+    body {
+        max-width: 1440px;
+        background-image: url(../assets/desktop/image-host.jpg);
+        margin: 0 auto;
+        background-position: center right;
+    }
+    .logo {
+        top: 112px;
+        left: 234px;
+    }
+    
+    .content {
+        width: 730px;
+        position: absolute;
+        left: 234px;
+        gap: 24px;
+    }
+    
+    input::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+    }
+    
+    button {
+        padding: 0 10px;
+        line-height: 28px;
     }
 }
